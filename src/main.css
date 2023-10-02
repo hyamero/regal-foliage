@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "NeueLight";
+  src: url("./assets/fonts/NeueHaasDisplayLight.ttf");
+}
+
+@font-face {
+  font-family: "NeueRoman";
+  src: url("./assets/fonts/NeueHaasDisplayRoman.ttf");
+}

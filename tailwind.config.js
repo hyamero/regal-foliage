@@ -2,7 +2,12 @@
 export default {
   content: ["./src/**/*.{tsx,ts}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "neue-light": ["NeueLight", "sans-serif"],
+        "neue-roman": ["NeueRoman", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
