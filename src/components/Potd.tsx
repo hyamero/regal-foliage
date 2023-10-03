@@ -4,7 +4,7 @@ import potd from "../assets/images/potd.png";
 export const Potd = () => {
   return (
     <section className="min-h-screen bg-secondary text-primary border-b-[2px] border-primary">
-      <Container className="pt-40">
+      <Container className="pt-56">
         <h2 className="text-[11rem] tracking-tight font-neue-roman leading-none">
           POTD
         </h2>
@@ -29,7 +29,7 @@ export const Potd = () => {
 
             <div className="w-full h-[1px] bg-primary" />
 
-            <div className="flex justify-between pb-40 font-neue-roman">
+            <div className="flex justify-between pb-44 font-neue-roman">
               <div className="flex gap-5">
                 <p className="py-2 whitespace-nowrap px-6 text-2xl border-[2px] border-primary rounded-full">
                   bonsai

@@ -2,6 +2,7 @@ import landingImage from "./assets/images/landing-image.jpg";
 import { Container } from "./components/Container";
 import { Navbar } from "./components/Navbar";
 import { Potd } from "./components/Potd";
+import { Showcase } from "./components/Showcase";
 
 function App() {
   return (
@@ -18,13 +19,13 @@ function App() {
 
           <div className="w-full h-[1px] bg-white" />
 
-          <div className="gap-10 flex font-neue-light text-white items-center justify-between">
+          <div className="gap-10 flex font-neue-light text-white flex-col items-left justify-between">
             <p className=" text-3xl">
               Transforming spaces with nature's opulence.
             </p>
             <button
               type="button"
-              className="py-2 whitespace-nowrap px-6 text-2xl border-[2px] rounded-full"
+              className="py-2 self-start  whitespace-nowrap px-6 text-2xl border-[2px] rounded-full"
             >
               Shop now
             </button>
@@ -33,6 +34,7 @@ function App() {
       </Container>
 
       <Potd />
+      <Showcase />
     </>
   );
 }
