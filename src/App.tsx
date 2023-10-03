@@ -1,15 +1,18 @@
 import landingImage from "./assets/images/landing-image.jpg";
+import { Container } from "./components/Container";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <section className="relative h-screen w-screen">
-        <img
-          className="z-[-1] absolute left-0 top-0 h-screen w-screen"
-          src={landingImage}
-          alt="Landing Background Image"
-        />
-        <div className="relative top-32 left-32 space-y-10 inline-block gap-10">
+      <Navbar />
+      <img
+        className="z-[-1] absolute left-0 top-0 h-screen w-screen"
+        src={landingImage}
+        alt="Landing Background Image"
+      />
+      <Container className="relative h-screen w-screen">
+        <div className="mt-52 space-y-10 inline-block gap-10">
           <h1 className="text-white text-9xl font-neue-light">Regal Foliage</h1>
 
           <div className="w-full h-[1px] bg-white" />
@@ -26,7 +29,7 @@ function App() {
             </button>
           </div>
         </div>
-      </section>
+      </Container>
     </>
   );
 }
