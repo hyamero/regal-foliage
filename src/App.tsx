@@ -1,6 +1,7 @@
 import landingImage from "./assets/images/landing-image.jpg";
 import { Container } from "./components/Container";
 import { Navbar } from "./components/Navbar";
+import { Potd } from "./components/Potd";
 
 function App() {
   return (
@@ -23,13 +24,15 @@ function App() {
             </p>
             <button
               type="button"
-              className="inline py-2 whitespace-nowrap px-6 text-2xl border-[2px] rounded-full"
+              className="py-2 whitespace-nowrap px-6 text-2xl border-[2px] rounded-full"
             >
               Shop now
             </button>
           </div>
         </div>
       </Container>
+
+      <Potd />
     </>
   );
 }
