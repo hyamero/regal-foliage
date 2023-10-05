@@ -1,6 +1,7 @@
 import landingImage from "./assets/images/landing-image.jpg";
 import { Container } from "./components/Container";
 import { Discover } from "./components/Discover";
+import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import { Potd } from "./components/Potd";
 import { Showcase } from "./components/Showcase";
@@ -37,6 +38,7 @@ function App() {
       <Potd />
       <Showcase />
       <Discover />
+      <Footer />
     </>
   );
 }
