@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /*
+ Hover Effect
+ */
+
+  .hover-effect {
+    position: relative;
+  }
+
+  .hover-effect:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    display: block;
+    right: 0;
+    background: #87a407;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+
+  .hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "NeueLight";
   src: url("./assets/fonts/NeueHaasDisplayLight.ttf");
