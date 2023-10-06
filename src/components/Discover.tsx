@@ -5,7 +5,6 @@ import {
   PiArrowRightLight,
   PiArrowLeftLight,
 } from "react-icons/pi";
-// import { SlArrowRightCircle, SlArrowLeftCircle } from "react-icons/sl";
 
 export const Discover = () => {
   const plants = [
@@ -38,46 +37,48 @@ export const Discover = () => {
   ];
 
   return (
-    <section className="flex min-h-screen flex-col gap-20 bg-secondary py-56 font-neue-roman">
+    <section className="flex min-h-screen flex-col gap-20 bg-secondary py-56 font-neue-roman text-primary">
       <Container>
-        <h2 className="font-neue-roman text-[11rem] leading-none tracking-tight text-primary">
+        <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,20vw,12rem)]">
           discover.
         </h2>
       </Container>
 
       <div className="h-[1px] w-full bg-[#B1B1B1]" />
 
-      <Container className="grid grid-cols-3 gap-8">
+      <Container className="flex grid-cols-3 flex-col gap-8 xl:grid">
         <div className="flex flex-col gap-10">
-          <h3 className="text-3xl">
+          <h3 className="text-2xl md:text-3xl">
             Transforming spaces with nature's opulence.
           </h3>
 
-          <ul className="flex flex-col gap-2">
-            {plantsTag.map((plant) => (
-              <li key={plant} className="cursor-pointer">
-                {plant}
-              </li>
-            ))}
-          </ul>
+          <div className="flex flex-row items-center justify-between gap-8 xl:flex-col">
+            <ul className="flex flex-wrap gap-4 xl:flex-col xl:flex-nowrap xl:gap-2 xl:self-start">
+              {plantsTag.map((plant) => (
+                <li key={plant} className="cursor-pointer ">
+                  {plant}
+                </li>
+              ))}
+            </ul>
 
-          <div className="sdf flex gap-5 text-3xl [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
-            <PiArrowLeftLight />
-            <PiArrowRightLight />
+            <div className="flex gap-5 self-end text-3xl sm:self-start md:justify-normal md:px-0 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
+              <PiArrowLeftLight />
+              <PiArrowRightLight />
+            </div>
           </div>
         </div>
 
-        <div className="col-span-2 flex gap-10">
+        <div className="col-span-2 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-5 md:grid-cols-3">
           {plants.map(({ name, image, price }) => (
             <div
               key={name}
-              className="flex flex-col gap-4 rounded-sm bg-white p-3"
+              className="flex flex-col gap-4 rounded-sm bg-white p-3 sm:w-auto"
             >
               <div className="h-full w-full overflow-hidden">
                 <img
                   src={image}
                   alt={name}
-                  className="h-full w-full cursor-pointer object-cover object-center  transition-transform duration-300 ease-in-out hover:scale-110"
+                  className="h-full w-full cursor-pointer object-cover object-center transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
               <div className="flex justify-between">
@@ -85,7 +86,7 @@ export const Discover = () => {
                   <h4>{name}</h4>
                   <PiArrowUpRightLight />
                 </div>
-                <p className="whitespace-nowrap rounded-full border-[1.5px] border-primary px-4 text-base text-primary">
+                <p className="whitespace-nowrap rounded-full border-[1.5px] border-primary px-4 text-base">
                   ${price}
                 </p>
               </div>

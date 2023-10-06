@@ -3,13 +3,13 @@ import { Container } from "./Container";
 
 export const Showcase = () => {
   return (
-    <section className="border-b-[2px] border-primary bg-white">
+    <section className="border-b-[2px] border-primary bg-white text-primary">
       <Container className="py-56">
         <div className="text-center">
           <p className="font-neue-light text-xl sm:text-2xl md:text-3xl">
             ( Royal Bonsai Elegance )
           </p>
-          <h2 className="font-neue-roman leading-none tracking-tight text-primary [fontSize:clamp(3rem,20vw,12rem)]">
+          <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,20vw,12rem)]">
             exqiusite.
           </h2>
         </div>
@@ -20,7 +20,7 @@ export const Showcase = () => {
           alt="Bonsai Showcase Image"
         />
 
-        <p className="text-left font-neue-roman text-2xl leading-tight sm:text-3xl md:text-4xl lg:text-5xl">
+        <p className="text-left font-neue-roman text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           Regal Foliage Co. offers rare and luxurious plants, transforming
           spaces with nature's opulence, and empowering you to create an
           environment of unmatched elegance.
@@ -40,7 +40,7 @@ export const Showcase = () => {
 
             <button
               type="button"
-              className="self-start whitespace-nowrap rounded-full  border-[2px] border-black px-6 py-2 font-neue-roman text-xl md:text-2xl"
+              className="self-start whitespace-nowrap rounded-full border-[2px] border-primary px-6 py-2 font-neue-roman text-xl md:text-2xl"
             >
               Discover
             </button>
