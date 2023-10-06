@@ -2,7 +2,7 @@ export const Navbar = () => {
   const navItems = ["Products", "Resources", "About us", "Sustainability"];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 text-xl mt-10 z-50 flex mix-blend-difference justify-between max-w-screen-xl w-[90%] mx-auto text-white font-neue-roman">
+    <nav className="fixed left-0 right-0 top-0 z-50 mx-auto mt-10 flex w-[90%] max-w-screen-xl justify-between font-neue-roman text-xl text-white mix-blend-difference">
       <p className="logo">logo.</p>
 
       <ul className="flex gap-10">

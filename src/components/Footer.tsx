@@ -64,7 +64,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#181A1B] font-neue-roman  contain flex w-full flex-col justify-between border-t-[1px] border-t-gray-500 pt-16 font-montserrat ">
+    <footer className="contain font-montserrat flex w-full flex-col justify-between border-t-[1px] border-t-gray-500 bg-[#181A1B] pt-16 font-neue-roman ">
       <Container className="flex w-full flex-col justify-between gap-20 whitespace-nowrap lg:flex-row lg:gap-40 xl:gap-96">
         <div className="text-white">
           <div className="block text-3xl font-medium">

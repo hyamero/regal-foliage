@@ -4,21 +4,21 @@ import { IoCartOutline } from "react-icons/io5";
 
 export const Potd = () => {
   return (
-    <section className="min-h-screen bg-secondary text-primary border-b-[2px] border-primary">
+    <section className="min-h-screen border-b-[2px] border-primary bg-secondary text-primary">
       <Container className="pt-56">
-        <h2 className="text-9xl md:text-[9.5rem] lg:text-[11rem] tracking-tight font-neue-roman leading-none">
+        <h2 className="font-neue-roman text-9xl leading-none tracking-tight md:text-[9.5rem] lg:text-[11rem]">
           POTD
         </h2>
-        <p className="font-neue-light text-3xl ml-1">( plant of the day )</p>
+        <p className="ml-1 font-neue-light text-3xl">( plant of the day )</p>
 
-        <div className="flex justify-between lg:flex-row flex-col items-end gap-0 lg:gap-36">
-          <div className="flex flex-col gap-12 mt-36 xl:mt-0">
+        <div className="flex flex-col items-end justify-between gap-0 lg:flex-row lg:gap-36">
+          <div className="mt-36 flex flex-col gap-12 xl:mt-0">
             <div>
-              <div className="mb-5 flex gap-3 font-neue-light items-center justify-between">
-                <h3 className="2xl:text-8xl sm:text-7xl text-6xl lg:text-7xl font-neue-light">
+              <div className="mb-5 flex items-center justify-between gap-3 font-neue-light">
+                <h3 className="font-neue-light text-6xl sm:text-7xl lg:text-7xl 2xl:text-8xl">
                   regal bonsai
                 </h3>
-                <p className="py-1 whitespace-nowrap font-neue-roman px-6 text-xl border-[2px] rounded-full border-primary">
+                <p className="whitespace-nowrap rounded-full border-[2px] border-primary px-6 py-1 font-neue-roman text-xl">
                   $269
                 </p>
               </div>
@@ -30,16 +30,16 @@ export const Potd = () => {
               </p>
             </div>
 
-            <div className="w-full h-[1px] bg-primary" />
+            <div className="h-[1px] w-full bg-primary" />
 
-            <div className="flex justify-between sm:flex-row flex-col gap-5 pb-44 font-neue-roman">
-              <div className="flex sm:gap-5 gap-3 [&>p]:py-2 [&>p]:whitespace-nowrap [&>p]:px-6 [&>p]:sm:text-2xl text-lg [&>p]:border-[2px] [&>p]:border-primary [&>p]:rounded-full">
+            <div className="flex flex-col justify-between gap-5 pb-44 font-neue-roman sm:flex-row">
+              <div className="flex gap-3 text-lg sm:gap-5 [&>p]:whitespace-nowrap [&>p]:rounded-full [&>p]:border-[2px] [&>p]:border-primary [&>p]:px-6 [&>p]:py-2 [&>p]:sm:text-2xl">
                 <p>bonsai</p>
                 <p>regal</p>
               </div>
 
               <button
-                className="py-2 flex gap-2 items-center whitespace-nowrap px-6 sm:text-2xl text-lg border-[2px] rounded-full bg-primary text-white justify-center"
+                className="flex items-center justify-center gap-2 whitespace-nowrap rounded-full border-[2px] bg-primary px-6 py-2 text-lg text-white sm:text-2xl"
                 type="button"
               >
                 <IoCartOutline className="text-3xl" />

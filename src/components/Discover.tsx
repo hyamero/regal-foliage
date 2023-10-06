@@ -38,14 +38,14 @@ export const Discover = () => {
   ];
 
   return (
-    <section className="font-neue-roman flex flex-col gap-20 py-56 bg-secondary min-h-screen">
+    <section className="flex min-h-screen flex-col gap-20 bg-secondary py-56 font-neue-roman">
       <Container>
-        <h2 className="text-primary text-[11rem] tracking-tight font-neue-roman leading-none">
+        <h2 className="font-neue-roman text-[11rem] leading-none tracking-tight text-primary">
           discover.
         </h2>
       </Container>
 
-      <div className="w-full h-[1px] bg-[#B1B1B1]" />
+      <div className="h-[1px] w-full bg-[#B1B1B1]" />
 
       <Container className="grid grid-cols-3 gap-8">
         <div className="flex flex-col gap-10">
@@ -61,31 +61,31 @@ export const Discover = () => {
             ))}
           </ul>
 
-          <div className="flex gap-5 text-3xl [&>*]:border [&>*]:p-2 [&>*]:rounded-full [&>*]:text-5xl [&>*]:border-black [&>*]:cursor-pointer">
+          <div className="sdf flex gap-5 text-3xl [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
             <PiArrowLeftLight />
             <PiArrowRightLight />
           </div>
         </div>
 
-        <div className="flex gap-10 col-span-2">
+        <div className="col-span-2 flex gap-10">
           {plants.map(({ name, image, price }) => (
             <div
               key={name}
-              className="bg-white p-3 gap-4 rounded-sm flex flex-col"
+              className="flex flex-col gap-4 rounded-sm bg-white p-3"
             >
               <div className="h-full w-full overflow-hidden">
                 <img
                   src={image}
                   alt={name}
-                  className="cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out  object-cover object-center h-full w-full"
+                  className="h-full w-full cursor-pointer object-cover object-center  transition-transform duration-300 ease-in-out hover:scale-110"
                 />
               </div>
               <div className="flex justify-between">
-                <div className="text-xl flex gap-1 cursor-pointer  items-center">
+                <div className="flex cursor-pointer items-center gap-1  text-xl">
                   <h4>{name}</h4>
                   <PiArrowUpRightLight />
                 </div>
-                <p className="whitespace-nowrap px-4 text-base border-[1.5px] rounded-full border-primary text-primary">
+                <p className="whitespace-nowrap rounded-full border-[1.5px] border-primary px-4 text-base text-primary">
                   ${price}
                 </p>
               </div>

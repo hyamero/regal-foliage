@@ -13,7 +13,7 @@ export const Container = ({
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
 >) => {
   return (
-    <div className={`max-w-screen-xl w-[90%] mx-auto ${className}`} {...rest}>
+    <div className={`mx-auto w-[90%] max-w-screen-xl ${className}`} {...rest}>
       {children}
     </div>
   );
