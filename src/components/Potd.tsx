@@ -6,10 +6,12 @@ export const Potd = () => {
   return (
     <section className="min-h-screen border-b-[2px] border-primary bg-secondary text-primary">
       <Container className="pt-56">
-        <h2 className="font-neue-roman text-9xl leading-none tracking-tight md:text-[9.5rem] lg:text-[11rem]">
+        <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,25vw,11rem)]">
           POTD
         </h2>
-        <p className="ml-1 font-neue-light text-3xl">( plant of the day )</p>
+        <p className="ml-1 font-neue-light text-2xl md:text-3xl">
+          ( plant of the day )
+        </p>
 
         <div className="flex flex-col items-end justify-between gap-0 lg:flex-row lg:gap-36">
           <div className="mt-36 flex flex-col gap-12 xl:mt-0">
