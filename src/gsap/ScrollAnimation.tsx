@@ -17,6 +17,7 @@ export const ScrollAnimation = ({
     start: string,
     scrub: number | boolean,
     toggleActions?: string,
+    end?: string,
   ) {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -24,6 +25,7 @@ export const ScrollAnimation = ({
         start,
         scrub,
         toggleActions: toggleActions || "restart none none reset",
+        end,
         markers: import.meta.env.DEV,
       },
     });
@@ -36,7 +38,10 @@ export const ScrollAnimation = ({
      * Responsible for onScroll (intersection) animation
      */
 
-    scrollTrig("#potd", "200px bottom", false)
+    /**
+     * POTD SECTION
+     */
+    scrollTrig("#potd", "top bottom", false)
       .fromTo(
         "#potd h2",
         {
@@ -65,7 +70,7 @@ export const ScrollAnimation = ({
         "-=0.5",
       );
 
-    scrollTrig("#potd", "200px bottom", 0.5).fromTo(
+    scrollTrig("#potd", "180px bottom", 0.5).fromTo(
       "#bonsai-img",
       {
         y: 350,
@@ -113,6 +118,51 @@ export const ScrollAnimation = ({
         },
         "<",
       );
+
+    /**
+     * SHOWCASE SECTION
+     */
+    scrollTrig("#showcase", "top bottom", false)
+      .fromTo(
+        "#showcase h2",
+        {
+          y: 250,
+          skewY: 7,
+        },
+        {
+          y: 0,
+          skewY: 0,
+          duration: 1.3,
+          ease: "power2.inOut",
+        },
+      )
+      .fromTo(
+        "#showcase-desc",
+        {
+          opacity: 0,
+        },
+        {
+          duration: 0.7,
+          opacity: 1,
+          ease: "power2.inOut",
+        },
+        "-=0.5",
+      );
+
+    scrollTrig("#showcase", "60% bottom", true, "", "65% top").fromTo(
+      ".showcase-desc-stagger",
+      {
+        opacity: 0,
+        y: 10,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.3,
+        duration: 1,
+        ease: "power3.inOut",
+      },
+    );
   }, []);
 
   return <div>{children}</div>;
