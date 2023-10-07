@@ -201,7 +201,7 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
               scrollToSection(href, 0);
             }}
           >
-            <div className="flex">
+            <div className="col-start-2 row-start-2 flex">
               <span className="menu-item-text">{text}</span>
             </div>
           </button>

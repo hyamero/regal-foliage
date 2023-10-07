@@ -33,7 +33,7 @@ body {
     height: 1.5px;
     display: block;
     right: 0;
-    background: #87a407;
+    background: rgb(74 222 128);
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
   }
