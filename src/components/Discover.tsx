@@ -37,8 +37,11 @@ export const Discover = () => {
   ];
 
   return (
-    <section className="flex min-h-screen flex-col gap-20 bg-secondary py-56 font-neue-roman text-primary">
-      <Container>
+    <section
+      id="discover"
+      className="flex min-h-screen flex-col gap-20 bg-secondary py-56 font-neue-roman text-primary"
+    >
+      <Container className="overflow-hidden">
         <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,20vw,12rem)]">
           discover.
         </h2>
@@ -48,12 +51,12 @@ export const Discover = () => {
 
       <Container className="flex grid-cols-3 flex-col gap-8 xl:grid">
         <div className="flex flex-col gap-10">
-          <h3 className="text-2xl md:text-3xl">
+          <h3 className="discover-nav-stagger text-2xl md:text-3xl">
             Transforming spaces with nature's opulence.
           </h3>
 
           <div className="flex flex-row items-center justify-between gap-8 xl:flex-col">
-            <ul className="flex flex-wrap gap-4 xl:flex-col xl:flex-nowrap xl:gap-2 xl:self-start">
+            <ul className="discover-nav-stagger flex flex-wrap gap-4 xl:flex-col xl:flex-nowrap xl:gap-2 xl:self-start">
               {plantsTag.map((plant) => (
                 <li key={plant} className="cursor-pointer ">
                   {plant}
@@ -61,7 +64,7 @@ export const Discover = () => {
               ))}
             </ul>
 
-            <div className="flex gap-5 self-end text-3xl sm:self-start md:justify-normal md:px-0 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
+            <div className="discover-nav-stagger flex gap-5 self-end text-3xl sm:self-start md:justify-normal md:px-0 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
               <PiArrowLeftLight />
               <PiArrowRightLight />
             </div>
@@ -72,7 +75,7 @@ export const Discover = () => {
           {plants.map(({ name, image, price }) => (
             <div
               key={name}
-              className="flex flex-col gap-4 rounded-sm bg-white p-3 sm:w-auto"
+              className="discover-product flex flex-col gap-4 rounded-sm bg-white p-3 sm:w-auto"
             >
               <div className="h-full w-full overflow-hidden">
                 <img

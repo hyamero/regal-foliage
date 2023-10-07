@@ -163,6 +163,54 @@ export const ScrollAnimation = ({
         ease: "power3.inOut",
       },
     );
+
+    /**
+     * DISCOVER SECTION
+     */
+    scrollTrig("#discover", "top bottom", false).fromTo(
+      "#discover h2",
+      {
+        y: 250,
+        skewY: 7,
+      },
+      {
+        y: 0,
+        skewY: 0,
+        duration: 1.3,
+        ease: "power2.inOut",
+      },
+    );
+
+    scrollTrig("#discover", "40% bottom", false, "play none none none")
+      .fromTo(
+        ".discover-nav-stagger",
+        {
+          opacity: 0,
+          y: 10,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power4.inOut",
+        },
+      )
+      .fromTo(
+        ".discover-product",
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power4.inOut",
+        },
+        "-=0.9",
+      );
   }, []);
 
   return <div>{children}</div>;
