@@ -21,6 +21,10 @@ const navItems = [
     text: "Discover",
     href: "discover",
   },
+  {
+    text: "Contact",
+    href: "footer",
+  },
 ];
 
 export const Navbar = () => {
@@ -122,7 +126,9 @@ export const Navbar = () => {
         <button
           className="nav-item font-neue-roman text-2xl"
           onClick={() => {
+            closeMenu();
             scrollTo("home", 0);
+            setIsOpen(false);
           }}
         >
           Regal Foliage.

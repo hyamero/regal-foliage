@@ -40,7 +40,10 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="min-h-[90vh] bg-[#181A1B] py-28 font-neue-roman xl:h-[90vh]">
+    <footer
+      id="footer"
+      className="min-h-[90vh] bg-[#181A1B] py-28 font-neue-roman xl:h-[90vh]"
+    >
       <Container className="flex h-full flex-col gap-40 md:grid md:grid-cols-3 lg:gap-72 xl:gap-96">
         <div className="flex flex-col justify-between">
           <div>
