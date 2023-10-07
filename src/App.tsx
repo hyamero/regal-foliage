@@ -17,7 +17,7 @@ function App() {
         src={landingImage}
         alt="Landing Background Image"
       />
-      <Container className="relative h-screen">
+      <Container id="home" className="relative h-screen">
         <div className="mt-52 inline-block gap-10 space-y-10 text-xl">
           <h1 className="font-neue-light text-6xl text-white md:text-8xl lg:text-9xl">
             <div

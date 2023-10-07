@@ -30,10 +30,10 @@ export const Discover = () => {
     "Jade",
     "Saffron",
     "Obliqua",
-    "Bonsai",
-    "Jade",
-    "Saffron",
-    "Obliqua",
+    "Bonsa",
+    "Jadei",
+    "Saffro",
+    "Obliua",
   ];
 
   return (
