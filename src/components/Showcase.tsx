@@ -22,11 +22,14 @@ export const Showcase = () => {
           </div>
         </div>
 
-        <img
-          className="mx-auto my-16 w-full rounded-md border-[1.5rem] border-primary sm:border-[3rem] lg:border-[4rem]"
-          src={showcase}
-          alt="Bonsai Showcase Image"
-        />
+        <div className="my-16 overflow-hidden rounded-md border-[1.5rem] border-primary bg-primary sm:border-[3rem] lg:border-[4rem]">
+          <img
+            id="showcase-img"
+            className="w-full scale-125 rounded-md object-cover object-center"
+            src={showcase}
+            alt="Bonsai Showcase Image"
+          />
+        </div>
 
         <p className="showcase-desc-stagger text-left font-neue-roman text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           Regal Foliage Co. offers rare and luxurious plants, transforming

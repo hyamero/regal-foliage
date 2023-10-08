@@ -28,6 +28,16 @@ export const ShowcaseScrollTrigger = () => {
       "-=0.5",
     );
 
+  scrollTrig("#showcase", "180px bottom", 0.7).fromTo(
+    "#showcase-img",
+    {
+      y: 170,
+    },
+    {
+      y: -100,
+    },
+  );
+
   scrollTrig("#showcase", "60% bottom", true, "", "70% top").fromTo(
     ".showcase-desc-stagger",
     {
