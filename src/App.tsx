@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import landingImage from "./assets/images/landing-image.jpg";
 import {
   Container,
@@ -9,6 +10,14 @@ import {
 } from "./components";
 
 function App() {
+  const scrollTo = (scrollElement: string, offsetY: number) => {
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: `#${scrollElement}`, offsetY },
+      ease: "power2.easeOut",
+    });
+  };
+
   return (
     <>
       <Navbar />
@@ -39,6 +48,7 @@ function App() {
             </p>
             <button
               type="button"
+              onClick={() => scrollTo("discover", 0)}
               className="self-start whitespace-nowrap rounded-full border-[2px] px-6 py-2 text-xl md:text-2xl"
             >
               Shop now
