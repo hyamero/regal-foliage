@@ -15,7 +15,7 @@ export const DiscoverScrollTrigger = () => {
     },
   );
 
-  scrollTrig("#discover", "30% bottom", true, "", "center 30%").fromTo(
+  scrollTrig("#discover", "top bottom", false).fromTo(
     ".discover-product",
     {
       opacity: 0,
@@ -26,6 +26,7 @@ export const DiscoverScrollTrigger = () => {
       y: 0,
       stagger: 0.2,
       duration: 1,
+      delay: 1,
       ease: "power4.inOut",
     },
     "-=0.9",

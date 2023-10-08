@@ -1,4 +1,5 @@
 import { useState } from "react";
+import gsap from "gsap";
 import { Container } from "./Container";
 import { plant1, plant2, plant3 } from "../assets/images";
 import {
@@ -9,6 +10,24 @@ import {
 import ProductModal from "./modals/ProductModal";
 
 export const Discover = () => {
+  const tl = gsap.timeline({
+    ease: "power4.out",
+  });
+
+  const nextPlants = () => {
+    tl.to(".discover-product", {
+      opacity: 0,
+      stagger: 0.2,
+      duration: 0.5,
+      y: 80,
+    }).to(".discover-product", {
+      opacity: 1,
+      stagger: 0.2,
+      duration: 0.5,
+      y: 0,
+    });
+  };
+
   const plants = [
     {
       name: "Regal Bonsai",
@@ -90,8 +109,8 @@ export const Discover = () => {
               </ul>
 
               <div className="discover-nav-stagger flex gap-5 self-end text-3xl sm:self-start md:justify-normal md:px-0 [&>*]:cursor-pointer [&>*]:rounded-full [&>*]:border [&>*]:border-black [&>*]:p-2 [&>*]:text-5xl">
-                <PiArrowLeftLight />
-                <PiArrowRightLight />
+                <PiArrowLeftLight onClick={nextPlants} />
+                <PiArrowRightLight onClick={nextPlants} />
               </div>
             </div>
           </div>
