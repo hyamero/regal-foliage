@@ -20,8 +20,8 @@ export const Potd = () => {
 
         <div className="flex flex-col items-end justify-between gap-0 lg:flex-row lg:gap-36">
           <div className="mt-36 flex flex-col gap-12 xl:mt-0">
-            <div id="potd-details">
-              <div className="mb-5 flex items-center justify-between gap-3 font-neue-light">
+            <div>
+              <div className="potd-details mb-5 flex items-center justify-between gap-3 font-neue-light">
                 <h3 className="font-neue-light text-6xl sm:text-7xl lg:text-7xl 2xl:text-8xl">
                   regal bonsai
                 </h3>
@@ -29,7 +29,7 @@ export const Potd = () => {
                   $269
                 </p>
               </div>
-              <p className="font-neue-light text-2xl">
+              <p className="potd-details font-neue-light text-2xl">
                 Meticulously crafted masterpiece boasts delicate branches,
                 sculpted over years to perfection. Its regal charm and timeless
                 grace make it a centerpiece of opulence and sophistication in

@@ -10,6 +10,7 @@ export const ScrollAnimation = ({
   children: React.ReactNode;
 }) => {
   const lenis = new Lenis();
+  gsap.registerPlugin(ScrollTrigger);
 
   lenis.on("scroll", ScrollTrigger.update);
 
@@ -19,7 +20,6 @@ export const ScrollAnimation = ({
 
   gsap.ticker.lagSmoothing(0);
 
-  gsap.registerPlugin(ScrollTrigger);
   /**
    * Fn for creating a new scrollTrigger instance
    */
@@ -91,9 +91,9 @@ export const ScrollAnimation = ({
       },
     );
 
-    scrollTrig("#potd", "50% bottom", false, "play none none none")
+    scrollTrig("#potd", "40% bottom", true, "", "40% top")
       .fromTo(
-        "#potd-details",
+        ".potd-details",
         {
           opacity: 0,
         },
@@ -102,6 +102,7 @@ export const ScrollAnimation = ({
           duration: 1,
           delay: 0.3,
           ease: "power3.inOut",
+          stagger: 0.2,
         },
       )
       .fromTo(
@@ -192,36 +193,21 @@ export const ScrollAnimation = ({
       },
     );
 
-    scrollTrig("#discover", "40% bottom", false, "play none none none")
-      .fromTo(
-        ".discover-nav-stagger",
-        {
-          opacity: 0,
-          y: 10,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.2,
-          duration: 1,
-          ease: "power4.inOut",
-        },
-      )
-      .fromTo(
-        ".discover-product",
-        {
-          opacity: 0,
-          y: 20,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          stagger: 0.2,
-          duration: 1,
-          ease: "power4.inOut",
-        },
-        "-=0.9",
-      );
+    scrollTrig("#discover", "30% bottom", true, "", "center top").fromTo(
+      ".discover-product",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.2,
+        duration: 1,
+        ease: "power4.inOut",
+      },
+      "-=0.9",
+    );
   }, []);
 
   return <div>{children}</div>;
