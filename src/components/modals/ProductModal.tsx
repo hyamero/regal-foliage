@@ -44,14 +44,17 @@ export default function ProductModal({
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="flex w-full max-w-xl transform flex-col gap-5 overflow-hidden rounded-2xl border-2 border-primary bg-white p-10 text-left align-middle text-primary shadow-xl transition-all">
-                <div className="grid grid-cols-5 gap-10">
-                  <img
-                    id="bonsai-img"
-                    src={image}
-                    alt="Regal Bonsai: Plant of the day"
-                    className="col-span-2 mx-auto rounded-lg"
-                  />
-                  <div className="col-span-3 mt-36 flex flex-col justify-between gap-12 xl:mt-0">
+                <div className="flex flex-col gap-10 sm:grid sm:grid-cols-5">
+                  <div className="h-60 w-full overflow-hidden sm:col-span-2 sm:h-full">
+                    <img
+                      id="bonsai-img"
+                      src={image}
+                      alt={name}
+                      className="h-full w-full rounded-lg border-2 border-primary object-cover object-center sm:border-0"
+                    />
+                  </div>
+
+                  <div className="col-span-3 flex flex-col justify-between gap-12">
                     <div>
                       <div className="potd-details mb-5 flex items-center justify-between gap-3 font-neue-light">
                         <h3 className="font-neue-light text-3xl">{name}</h3>
@@ -69,11 +72,11 @@ export default function ProductModal({
                   </div>
                 </div>
 
-                <div className="grid grid-cols-5 gap-12 font-neue-roman">
-                  <div className="col-span-2 flex gap-3">
+                <div className="flex flex-col-reverse gap-5 font-neue-roman sm:grid sm:grid-cols-5 sm:gap-12">
+                  <div className="flex w-full gap-3 sm:col-span-2">
                     <button
                       type="button"
-                      className="col-span-2 flex items-center justify-center gap-2 rounded-md border border-transparent bg-blue-100 px-4 py-2 font-neue-roman text-lg font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-blue-100 px-4 py-2 font-neue-roman text-lg font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
                       <p>Details</p>
@@ -81,7 +84,7 @@ export default function ProductModal({
 
                     <button
                       type="button"
-                      className="col-span-2 flex items-center justify-center gap-2 rounded-md border border-transparent bg-red-100 px-4 py-2 font-neue-roman text-lg font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      className="flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-red-100 px-4 py-2 font-neue-roman text-lg font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
                       onClick={closeModal}
                     >
                       <p>Close</p>
