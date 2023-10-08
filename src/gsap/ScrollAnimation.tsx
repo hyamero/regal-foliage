@@ -2,12 +2,23 @@ import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useLayoutEffect from "../hooks/useIsomorphicLayoutEffect";
+import Lenis from "@studio-freight/lenis";
 
 export const ScrollAnimation = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
+  const lenis = new Lenis();
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+
   gsap.registerPlugin(ScrollTrigger);
   /**
    * Fn for creating a new scrollTrigger instance
