@@ -57,12 +57,14 @@ export default function ProductModal({
                   <div className="col-span-3 flex flex-col justify-between gap-12">
                     <div>
                       <div className="potd-details mb-5 flex items-center justify-between gap-3 font-neue-light">
-                        <h3 className="font-neue-light text-3xl">{name}</h3>
-                        <p className="whitespace-nowrap rounded-full border-[1.7px] border-primary px-5 font-neue-roman text-lg">
+                        <h3 className="font-neue-light text-2xl sm:text-3xl">
+                          {name}
+                        </h3>
+                        <p className="text-md whitespace-nowrap rounded-full border-[1.7px] border-primary px-5 font-neue-roman sm:text-lg">
                           ${price}
                         </p>
                       </div>
-                      <p className="potd-details font-neue-light text-xl">
+                      <p className="potd-details text-md font-neue-light sm:text-xl">
                         Meticulously crafted masterpiece boasts delicate
                         branches, sculpted over years to perfection.
                       </p>
@@ -76,7 +78,7 @@ export default function ProductModal({
                   <div className="flex w-full gap-3 sm:col-span-2">
                     <button
                       type="button"
-                      className="flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-blue-100 px-4 py-2 font-neue-roman text-lg font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                      className="text-md flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-blue-100 px-4 py-2 font-neue-roman font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 sm:text-lg"
                       onClick={closeModal}
                     >
                       <p>Details</p>
@@ -84,7 +86,7 @@ export default function ProductModal({
 
                     <button
                       type="button"
-                      className="flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-red-100 px-4 py-2 font-neue-roman text-lg font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                      className="text-md flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-red-100 px-4 py-2 font-neue-roman font-medium text-red-900 hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2 sm:text-lg"
                       onClick={closeModal}
                     >
                       <p>Close</p>
@@ -93,7 +95,7 @@ export default function ProductModal({
 
                   <button
                     type="button"
-                    className="col-span-3 flex items-center justify-center gap-2 rounded-md border border-transparent bg-green-100 px-4 py-2 font-neue-roman text-lg font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+                    className="text-md col-span-3 flex items-center justify-center gap-2 rounded-md border border-transparent bg-green-100 px-4 py-2 font-neue-roman font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 sm:text-lg"
                     onClick={closeModal}
                   >
                     <IoCartOutline className="text-2xl" />

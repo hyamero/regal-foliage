@@ -1,13 +1,38 @@
 import { Container } from "./Container";
-import potd from "../assets/images/potd.png";
 import { IoCartOutline } from "react-icons/io5";
+import { useState } from "react";
+import ProductModal from "./modals/ProductModal";
+import potd from "../assets/images/potd.png";
+import plant3 from "../assets/images/plant3.jpg";
 
 export const Potd = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [productDetails, setProductDetails] = useState({
+    name: "",
+    price: 0,
+    image: "",
+  });
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal(name: string, price: number, image: string) {
+    setProductDetails({ name, price, image });
+    setIsOpen(true);
+  }
+
   return (
     <section
       id="potd"
       className="min-h-screen overflow-y-hidden border-b-[2px] border-primary bg-secondary text-primary"
     >
+      <ProductModal
+        isOpen={isOpen}
+        closeModal={closeModal}
+        {...productDetails}
+      />
+
       <Container className="pt-56">
         <div className="overflow-hidden">
           <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,25vw,11rem)]">
@@ -48,6 +73,7 @@ export const Potd = () => {
               <button
                 className="potd-tags flex items-center justify-center gap-2 whitespace-nowrap rounded-full border-[2px] bg-primary px-6 py-2 text-lg text-white sm:text-2xl"
                 type="button"
+                onClick={() => openModal("Regal Bonsai", 269, plant3)}
               >
                 <IoCartOutline className="text-3xl" />
                 <p>Add to Cart</p>
