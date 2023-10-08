@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@studio-freight/lenis':
+    specifier: ^1.0.26
+    version: 1.0.26
   gsap:
     specifier: ^3.12.2
     version: 3.12.2
@@ -382,6 +385,10 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@studio-freight/lenis@1.0.26:
+    resolution: {integrity: sha512-PLpPMtYoo50Z1otpUpGONK/BkJ0nrE7pY6Q1+KMWuPup+S+XFR/FJOXGkrtISzc6DtHgilbi1b6xDgDluFHsaA==}
+    dev: false
 
   /@swc/core-darwin-arm64@1.3.90:
     resolution: {integrity: sha512-he0w74HvcoufE6CZrB/U/VGVbc7021IQvYrn1geMACnq/OqMBqjdczNtdNfJAy87LZ4AOUjHDKEIjsZZu7o8nQ==}
