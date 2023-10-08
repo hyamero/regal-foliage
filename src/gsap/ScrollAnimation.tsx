@@ -193,7 +193,7 @@ export const ScrollAnimation = ({
       },
     );
 
-    scrollTrig("#discover", "30% bottom", true, "", "center top").fromTo(
+    scrollTrig("#discover", "30% bottom", true, "", "center 30%").fromTo(
       ".discover-product",
       {
         opacity: 0,

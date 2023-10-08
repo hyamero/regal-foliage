@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container } from "./Container";
 import { plant1, plant2, plant3 } from "../assets/images";
 import {
@@ -5,7 +6,6 @@ import {
   PiArrowRightLight,
   PiArrowLeftLight,
 } from "react-icons/pi";
-import { useState } from "react";
 import ProductModal from "./modals/ProductModal";
 
 export const Discover = () => {
@@ -42,14 +42,15 @@ export const Discover = () => {
   const [productDetails, setProductDetails] = useState({
     name: "",
     price: 0,
+    image: "",
   });
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  function openModal(name: string, price: number) {
-    setProductDetails({ name, price });
+  function openModal(name: string, price: number, image: string) {
+    setProductDetails({ name, price, image });
     setIsOpen(true);
   }
 
@@ -99,7 +100,7 @@ export const Discover = () => {
             {plants.map(({ name, image, price }) => (
               <div
                 key={name}
-                onClick={() => openModal(name, price)}
+                onClick={() => openModal(name, price, image)}
                 className="discover-product flex flex-col gap-4 rounded-sm bg-white p-3 sm:w-auto"
               >
                 <div className="h-full w-full overflow-hidden">
