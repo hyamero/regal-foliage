@@ -17,7 +17,7 @@ export const Showcase = () => {
           </p>
           <div className="overflow-hidden">
             <h2 className="font-neue-roman leading-none tracking-tight [fontSize:clamp(3rem,20vw,12rem)]">
-              exqiusite.
+              exquisite.
             </h2>
           </div>
         </div>

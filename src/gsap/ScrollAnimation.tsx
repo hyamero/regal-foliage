@@ -2,12 +2,23 @@ import React from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useLayoutEffect from "../hooks/useIsomorphicLayoutEffect";
+import Lenis from "@studio-freight/lenis";
 
 export const ScrollAnimation = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
+  const lenis = new Lenis();
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+
   gsap.registerPlugin(ScrollTrigger);
   /**
    * Fn for creating a new scrollTrigger instance
@@ -41,7 +52,7 @@ export const ScrollAnimation = ({
     /**
      * POTD SECTION
      */
-    scrollTrig("#potd", "top bottom", false)
+    scrollTrig("#potd", "100px bottom", false)
       .fromTo(
         "#potd h2",
         {
@@ -122,7 +133,7 @@ export const ScrollAnimation = ({
     /**
      * SHOWCASE SECTION
      */
-    scrollTrig("#showcase", "top bottom", false)
+    scrollTrig("#showcase", "100px bottom", false)
       .fromTo(
         "#showcase h2",
         {
@@ -149,7 +160,7 @@ export const ScrollAnimation = ({
         "-=0.5",
       );
 
-    scrollTrig("#showcase", "60% bottom", true, "", "65% top").fromTo(
+    scrollTrig("#showcase", "60% bottom", true, "", "70% top").fromTo(
       ".showcase-desc-stagger",
       {
         opacity: 0,
@@ -167,7 +178,7 @@ export const ScrollAnimation = ({
     /**
      * DISCOVER SECTION
      */
-    scrollTrig("#discover", "top bottom", false).fromTo(
+    scrollTrig("#discover", "100px bottom", false).fromTo(
       "#discover h2",
       {
         y: 250,

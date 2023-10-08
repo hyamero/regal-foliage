@@ -54,7 +54,7 @@ export const Footer = () => {
               </div>
               <ul>
                 {navItems.map(({ text, href }) => (
-                  <li>
+                  <li key={text}>
                     <button
                       type="button"
                       key={text}
@@ -78,7 +78,7 @@ export const Footer = () => {
 
               <ul>
                 {aboutItems.map((text) => (
-                  <li>
+                  <li key={text}>
                     <button
                       type="button"
                       key={text}

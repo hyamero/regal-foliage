@@ -168,7 +168,6 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
     const menuItems = [...document.querySelectorAll(".menu-item")];
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     menuItems.forEach((item: any) => {
-      console.log(item);
       const word = item.children[0].innerText.split("");
       item.children[0].innerHTML = "";
       word.forEach((letter: string, idx: number) => {
