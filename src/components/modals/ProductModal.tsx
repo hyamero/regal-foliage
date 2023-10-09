@@ -1,6 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { IoCartOutline } from "react-icons/io5";
+import { toast } from "sonner";
 
 type ProductModalProps = {
   isOpen: boolean;
@@ -79,7 +80,10 @@ export default function ProductModal({
                     <button
                       type="button"
                       className="text-md flex w-full items-center justify-center gap-2 rounded-md border border-transparent bg-blue-100 px-4 py-2 font-neue-roman font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 sm:text-lg"
-                      onClick={closeModal}
+                      onClick={() => {
+                        closeModal();
+                        toast.error("Info is not yet available.");
+                      }}
                     >
                       <p>Details</p>
                     </button>
@@ -96,7 +100,15 @@ export default function ProductModal({
                   <button
                     type="button"
                     className="text-md col-span-3 flex items-center justify-center gap-2 rounded-md border border-transparent bg-green-100 px-4 py-2 font-neue-roman font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 sm:text-lg"
-                    onClick={closeModal}
+                    onClick={() => {
+                      closeModal();
+                      toast("Added to cart successfully", {
+                        action: {
+                          label: "Undo",
+                          onClick: () => console.log("Undo"),
+                        },
+                      });
+                    }}
                   >
                     <IoCartOutline className="text-2xl" />
                     <p>Add to Cart</p>

@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import landingImage from "./assets/images/landing-image.jpg";
+import { Toaster } from "sonner";
 import {
   Container,
   Discover,
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Toaster />
       <Navbar />
       <img
         className="absolute left-0 top-0 z-[-1] h-screen w-screen object-cover object-left"
