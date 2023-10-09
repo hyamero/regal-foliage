@@ -1,27 +1,9 @@
-# React + TypeScript + Vite
+![thumbnail](https://github.com/hyamero/regal-foliage/assets/78056869/88e02f08-9e78-450d-951e-5829f1bd4bf4)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Regal Foliage
+Regal Foliage Co. offers rare and luxurious plants, transforming spaces with nature's opulence, and empowering you to create an environment of unmatched elegance.
 
-Currently, two official plugins are available:
+* Elevating spaces with rare and luxurious plants, embracing nature's elegance through uncompromising quality and service.
+* Redefining luxury in botany, curating captivating plants and empowering patrons to infuse life with refined opulence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
