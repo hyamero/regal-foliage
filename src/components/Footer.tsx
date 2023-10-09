@@ -4,7 +4,7 @@ import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 import {
   BiLogoFacebookCircle,
   BiLogoInstagram,
-  BiLogoTwitter,
+  BiLogoGithub,
 } from "react-icons/bi";
 
 export const Footer = () => {
@@ -111,15 +111,15 @@ export const Footer = () => {
                 </div>
               </div>
               <div className="flex gap-3 text-[#D0D0C8] [&>*>*]:text-2xl [&>*]:grid [&>*]:h-12 [&>*]:w-12 [&>*]:cursor-pointer [&>*]:place-items-center [&>*]:rounded-full [&>*]:border [&>*]:border-[#616260] [&>*]:p-2">
-                <div>
+                <a href="https://www.facebook.com/omsimos.agency">
                   <BiLogoFacebookCircle />
-                </div>
-                <div>
+                </a>
+                <a href="https://www.instagram.com/omsim.os/">
                   <BiLogoInstagram />
-                </div>
-                <div>
-                  <BiLogoTwitter />
-                </div>
+                </a>
+                <a href="https://github.com/omsimos">
+                  <BiLogoGithub />
+                </a>
               </div>
             </div>
 
