@@ -1,5 +1,4 @@
-
-![thumbnail](https://github.com/hyamero/regal-foliage/assets/78056869/135b2319-c26e-4437-9542-99efccc4308e)
+![thumbnail](https://github.com/hyamero/regal-foliage/assets/78056869/88e02f08-9e78-450d-951e-5829f1bd4bf4)
 
 # Regal Foliage
 Regal Foliage Co. offers rare and luxurious plants, transforming spaces with nature's opulence, and empowering you to create an environment of unmatched elegance.
