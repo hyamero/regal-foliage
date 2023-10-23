@@ -9,6 +9,8 @@ import {
   Potd,
   Showcase,
 } from "./components";
+import { Loader } from "./gsap/Loader";
+import { useStore } from "./hooks/useStore";
 
 function App() {
   const scrollTo = (scrollElement: string, offsetY: number) => {
@@ -19,8 +21,11 @@ function App() {
     });
   };
 
+  const { unmountLoader } = useStore();
+
   return (
     <>
+      {!unmountLoader && <Loader />}
       <Toaster />
       <Navbar />
       <img

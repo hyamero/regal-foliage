@@ -41,6 +41,7 @@ export const ScrollAnimation = ({
 }: {
   children: React.ReactNode;
 }) => {
+  const comp = React.useRef<HTMLDivElement>(null);
   /**
    * Lenis Smooth Scrolling
    */
@@ -55,10 +56,13 @@ export const ScrollAnimation = ({
   gsap.ticker.lagSmoothing(0);
 
   useLayoutEffect(() => {
-    PotdScrollTrigger();
-    ShowcaseScrollTrigger();
-    DiscoverScrollTrigger();
+    const ctx = gsap.context(() => {
+      PotdScrollTrigger();
+      ShowcaseScrollTrigger();
+      DiscoverScrollTrigger();
+    }, comp);
+    return () => ctx.revert();
   }, []);
 
-  return <div>{children}</div>;
+  return <div ref={comp}>{children}</div>;
 };
